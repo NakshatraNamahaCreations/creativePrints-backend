@@ -229,7 +229,6 @@ const rawShape = [
       }
     ]
   },
-
   {
     title: "Square",
     subtitle: "Eye-catching square format",

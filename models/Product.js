@@ -50,6 +50,12 @@ const ProductSchema = new mongoose.Schema({
   priceText: String,
   image: String,
   rating: Number,
+  
+    productType: {
+    type: String,
+    enum: ["visiting-card", "letterhead"],
+    default: "visiting-card",
+  },
   group: { type: String, enum: ["shape", "paper", "specialty"] },
   slug: { type: String, unique: true },
 
