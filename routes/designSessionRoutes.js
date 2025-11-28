@@ -3,10 +3,6 @@ import DesignSession from "../models/DesignSession.js";
 
 const router = express.Router();
 
-/**
- * POST /api/design-session
- * Create a new design session (first time save)
- */
 router.post("/design-session", async (req, res) => {
   try {
     const session = await DesignSession.create(req.body);
@@ -23,10 +19,7 @@ router.post("/design-session", async (req, res) => {
   }
 });
 
-/**
- * PUT /api/design-session/:id
- * Update an existing design session (subsequent saves / Next button)
- */
+
 router.put("/design-session/:id", async (req, res) => {
   try {
     const updated = await DesignSession.findByIdAndUpdate(
