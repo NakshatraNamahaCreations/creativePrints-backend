@@ -73,8 +73,7 @@ router.delete("/:id", async (req, res) => {
     res.status(400).json({ error: "Invalid ID" });
   }
 });
-
-// OPTIONAL: Delete product by slug
+    
 router.delete("/slug/:slug", async (req, res) => {
   try {
     const slug = String(req.params.slug || "").toLowerCase();
